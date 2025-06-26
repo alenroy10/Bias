@@ -1,0 +1,164 @@
+@import '../styles/global.module.css';
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--neutral-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--accent-blue);
+}
+
+.loginButton {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-medium) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  color: white;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.userEmail {
+  font-size: 0.9rem;
+  color: var(--primary-medium);
+  font-weight: 500;
+}
+
+.logoutButton {
+  background: transparent;
+  color: var(--primary-medium);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: var(--primary-medium);
+  color: white;
+  border-color: var(--primary-medium);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-dark);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--neutral-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    gap: 1rem;
+  }
+
+  .menu.open {
+    display: flex;
+    align-items: center;
+  }
+
+  .userSection {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .userEmail {
+    text-align: center;
+  }
+
+  .logoutButton {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .loginButton {
+    width: 100%;
+    text-align: center;
+    margin: 0 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+} 

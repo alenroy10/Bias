@@ -1,0 +1,59 @@
+@import '../styles/global.module.css';
+
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--neutral-white);
+  padding: 3rem 0 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.brand .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.brand .tagline {
+  font-size: 1rem;
+  color: var(--light-bg);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--neutral-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--accent-blue);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--light-bg);
+  border-top: 1px solid var(--primary-medium);
+  padding-top: 1.5rem;
+} 
